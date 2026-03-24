@@ -1,0 +1,174 @@
+_dataset:
+  class: BI2015b
+  code: BrainInvaders2015b
+  doi: https://doi.org/10.5281/zenodo.3267307
+  interval:
+  - 0
+  - 1
+  n_subjects: 44
+  paradigm: p300
+abstract: 'We describe the experimental procedures for an experiment dataset that we have made publicly available at https://doi.org/10.5281/zenodo.3266930
+  in mat and csv formats. This dataset contains electroencephalographic (EEG) recordings of 50 subjects playing to a visual
+  P300 Brain-Computer Interface (BCI) videogame named Brain Invaders. The interface uses the oddball paradigm on a grid of
+  36 symbols (1 Target, 35 Non-Target) that are flashed pseudo-randomly to elicit the P300 response. EEG data were recorded
+  using 32 active wet electrodes with three conditions: flash duration 50ms, 80ms or 110ms. The experiment took place at GIPSA-lab,
+  Grenoble, France, in 2015.'
+acquisition:
+  cap_manufacturer: g.tec
+  cap_model: g.GAMMAcap
+  channel_types:
+    eeg: 32
+  electrode_material: Silver/Silver Chloride
+  electrode_type: wet
+  filters: no digital filter applied
+  ground: Fz
+  hardware: g.USBamp (g.tec, Schiedlberg, Austria)
+  line_freq: 50.0
+  montage: 10-10
+  n_channels: 32
+  reference: right earlobe
+  sampling_rate: 512.0
+  sensor_type: wet Silver/Silver Chloride electrodes
+  sensors:
+  - AFz
+  - C3
+  - C4
+  - CP1
+  - CP2
+  - CP5
+  - CP6
+  - Cz
+  - F3
+  - F4
+  - F7
+  - F8
+  - FC1
+  - FC2
+  - FC5
+  - FC6
+  - Fp1
+  - Fp2
+  - O1
+  - O2
+  - Oz
+  - P3
+  - P4
+  - P7
+  - P8
+  - PO10
+  - PO7
+  - PO8
+  - PO9
+  - Pz
+  - T7
+  - T8
+  software: OpenVibe
+bci_application:
+  applications:
+  - gaming
+  environment: small room with a surface of four meters square, containing a 24' screen
+  online_feedback: true
+contributing_labs:
+- GIPSA-lab
+cross_validation:
+  evaluation_type:
+  - cross_session
+data_structure:
+  n_blocks: 9
+  n_trials: variable per subject (up to 8 attempts per level, 9 levels per session, 3 sessions)
+  trials_context: per session (9 levels per session, 3 sessions with different flash durations)
+documentation:
+  associated_paper_doi: hal-02172347
+  country: France
+  data_url: https://doi.org/10.5281/zenodo.3266930
+  description: 'EEG recordings of 50 subjects playing to a visual P300 Brain-Computer Interface (BCI) videogame named Brain
+    Invaders. The interface uses the oddball paradigm on a grid of 36 symbols (1 Target, 35 Non-Target) that are flashed pseudo-randomly
+    to elicit the P300 response. Three conditions: flash duration 50ms, 80ms or 110ms.'
+  doi: 10.5281/zenodo.3266930
+  ethics_approval:
+  - Ethical Committee of the University of Grenoble Alpes (Comité d'Ethique pour la Recherche Non-Interventionnelle)
+  institution: GIPSA-lab, CNRS, University Grenoble-Alpes, Grenoble INP
+  institution_address: GIPSA-lab, 11 rue des Mathématiques, Grenoble Campus BP46, F-38402, France
+  investigators:
+  - Louis Korczowski
+  - Martine Cederhout
+  - Anton Andreev
+  - Grégoire Cattan
+  - Pedro Luiz Coelho Rodrigues
+  - Violette Gautheret
+  - Marco Congedo
+  keywords:
+  - Electroencephalography (EEG)
+  - P300
+  - Brain-Computer Interface
+  - Experiment
+  license: CC-BY-4.0
+  publication_year: 2019
+  repository: Zenodo
+  senior_author: Marco Congedo
+experiment:
+  class_labels:
+  - Target
+  - NonTarget
+  events:
+    Non-Target: 2
+    Target: 1
+  feedback_type: visual (game interface with reward screen)
+  instructions: Players had up to eight attempts to destroy the target symbol per level. Target symbol identification using
+    oddball paradigm with 36 aliens flashing in pseudo-random groups of six symbols.
+  mode: online
+  n_classes: 2
+  paradigm: p300
+  primary_modality: visual
+  stimulus_modalities:
+  - visual
+  stimulus_type: visual flash
+  study_design: Three game sessions with different flash durations (110ms, 80ms, 50ms), with resting state and eyes closed
+    conditions recorded before and after. Subjects were instructed to limit eye blinks, head movements and face muscular contractions.
+file_format: mat and csv
+methodology: The experiment consisted of three game sessions of Brain Invaders of 9 levels each with different flash duration
+  (110ms, 80ms, 50ms). Before and after the three game sessions, around one minute of resting state and eyes closed conditions
+  were recorded. The interface is composed of 36 aliens. A repetition is composed of 12 flashes of pseudo-random groups of
+  six symbols chosen in such a way that after each repetition each symbol has flashed exactly two times. The ratio of Target
+  versus non-Target is one-to-five. During the experiment, the output of a real-time adaptive Riemannian Minimum Distance
+  to Mean (RMDM) classifier was used for assessing the participants' command. This scheme allows a calibration-free classifier.
+n_contributing_labs: 1
+paradigm_specific:
+  detected_paradigm: p300
+  n_repetitions: 12
+  n_targets: 1
+participants:
+  age_mean: 23.7
+  age_std: 3.19
+  bci_experience: mostly students and young researchers
+  clinical_population: Healthy
+  gender:
+    female: 14
+    male: 36
+  health_status: patients
+  n_subjects: 44
+  species: human
+performance:
+  note: Real-time adaptive classifier used during experiment, performance variable per subject
+preprocessing:
+  data_state: raw EEG with synchronized hardware tagging via USB digital-to-analog converter (reduced jitter compared to software
+    tagging)
+  notes: Data were stored with no digital filter applied. USB digital-to-analog converter connected to the g.USBamp trigger
+    channel was used to synchronize experimental tags produced by Brain Invaders with EEG signals to reduce jitter.
+runs_per_session: 4
+sessions_per_subject: 1
+signal_processing:
+  classifiers:
+  - Riemannian Minimum Distance to Mean (RMDM)
+  - xDAWN
+  - Riemannian MDM
+  feature_extraction:
+  - Covariance/Riemannian
+  - xDAWN
+tags:
+  modality:
+  - Visual
+  pathology:
+  - Healthy
+  type:
+  - Perception
