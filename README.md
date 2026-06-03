@@ -1,3 +1,5 @@
+[![DOI](https://img.shields.io/badge/DOI-10.82901%2Fnemar.nm000217-blue)](https://doi.org/10.82901/nemar.nm000217)
+
 # P300 dataset BI2015b from a "Brain Invaders" experiment
 
 P300 dataset BI2015b from a "Brain Invaders" experiment.
