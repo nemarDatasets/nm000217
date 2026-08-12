@@ -1,6 +1,11 @@
 {
   "version": "2.0",
   "pipeline_stage": "enriched",
+  "title": "P300 dataset BI2015b from a \"Brain Invaders\" experiment",
+  "description": "This dataset comprises electroencephalographic recordings from 50 healthy subjects performing a visual P300 brain-computer interface videogame called Brain Invaders. The experiment employed an oddball paradigm with 36 symbols flashed pseudo-randomly across three sessions with varying flash durations (110ms, 80ms, 50ms) to elicit P300 responses. EEG signals were acquired using 32 active wet electrodes at 512 Hz sampling rate, with real-time adaptive classification enabling calibration-free operation.",
+  "methods_description": "EEG data were recorded from 44 subjects using 32 active wet Silver/Silver Chloride electrodes (10-10 montage) at 512 Hz sampling rate with a g.USBamp amplifier (g.tec). The experiment consisted of three game sessions of 9 levels each with different flash durations (110ms, 80ms, 50ms), preceded and followed by ~1 minute of resting state recordings with eyes closed. Each repetition comprised 12 pseudo-random flashes of six-symbol groups with a 1:5 target-to-non-target ratio. USB digital-to-analog converter synchronization was used to reduce timing jitter. A real-time adaptive Riemannian Minimum Distance to Mean classifier provided online feedback.",
+  "license": "CC-BY-4.0",
+  "dataset_type": "derivative",
   "authors": {
     "Louis Korczowski": {},
     "Martine Cederhout": {},
@@ -14,6 +19,39 @@
       "orcid": "0000-0003-2196-0409"
     }
   },
+  "keywords": [
+    {
+      "term": "Electroencephalography",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D004569"
+    },
+    {
+      "term": "P300",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D018913"
+    },
+    {
+      "term": "Brain-Computer Interface",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D001931"
+    },
+    {
+      "term": "Oddball paradigm"
+    },
+    {
+      "term": "Event-related potential",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D018913"
+    },
+    {
+      "term": "Visual stimulus",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D014796"
+    },
+    {
+      "term": "Gaming"
+    }
+  ],
   "related_identifiers": [
     {
       "identifier": "10.5281/zenodo.3266930",
@@ -22,11 +60,6 @@
     },
     {
       "identifier": "https://github.com/nemarDatasets/nm000217",
-      "identifier_type": "URL",
-      "relation_type": "IsDescribedBy"
-    },
-    {
-      "identifier": "https://nemar.org/dataexplorer/detail?dataset_id=nm000217",
       "identifier_type": "URL",
       "relation_type": "IsDescribedBy"
     },
@@ -44,59 +77,29 @@
       "identifier": "10.1038/s41597-019-0104-8",
       "identifier_type": "DOI",
       "relation_type": "IsReferencedBy"
+    },
+    {
+      "identifier": "https://nemar.org/dataset/nm000217",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
     }
   ],
-  "title": "P300 dataset BI2015b from a \"Brain Invaders\" experiment",
-  "license": "CC-BY-4.0",
-  "dataset_type": "derivative",
   "resource_type_general": "Dataset",
+  "resource_type_specific": "EEG Dataset",
   "modalities": [
     "eeg"
   ],
-  "resource_type_specific": "EEG Dataset",
   "sizes": [
-    "4.6 GB (177 files)"
+    "9.2 GB (265 files)"
   ],
   "formats": [
     ".bdf",
     ".json",
+    ".mat",
     ".md",
     ".tsv",
     ".yaml",
     ".yml"
   ],
-  "description": "This dataset comprises electroencephalographic recordings from 50 healthy subjects performing a visual P300 brain-computer interface videogame called Brain Invaders. The experiment employed an oddball paradigm with 36 symbols flashed pseudo-randomly across three sessions with varying flash durations (50ms, 80ms, 110ms) to elicit P300 responses. EEG signals were acquired using 32 active wet electrodes at 512 Hz sampling rate, with real-time adaptive classification enabling calibration-free operation.",
-  "methods_description": "EEG data were recorded from 50 subjects using 32 active wet Silver/Silver Chloride electrodes (10-10 montage) at 512 Hz sampling rate with a g.USBamp amplifier (g.tec). The experiment consisted of three game sessions of 9 levels each with different flash durations (110ms, 80ms, 50ms), with resting state and eyes-closed recordings before and after. The Brain Invaders interface presented 36 aliens in pseudo-random groups of six symbols using an oddball paradigm (1 Target, 35 Non-Target). Synchronization was achieved via USB digital-to-analog converter connected to the trigger channel to reduce jitter. A real-time adaptive Riemannian Minimum Distance to Mean classifier provided online feedback.",
-  "keywords": [
-    {
-      "term": "Electroencephalography",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D004569"
-    },
-    {
-      "term": "P300"
-    },
-    {
-      "term": "Brain-Computer Interface"
-    },
-    {
-      "term": "oddball paradigm"
-    },
-    {
-      "term": "event-related potential"
-    },
-    {
-      "term": "visual stimulus"
-    },
-    {
-      "term": "Riemannian geometry"
-    },
-    {
-      "term": "calibration-free"
-    },
-    {
-      "term": "real-time classification"
-    }
-  ],
-  "source_hash": "17a10e60d9e78bb24b7b02bbc71a0c0f47d499e598a53c4db22c77a056303632"
+  "source_hash": "de1540b63a3fc1c21d60b099359ec00f29f579a6cf35ae4e6e8906e0c54f5d42"
 }
