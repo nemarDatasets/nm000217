@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "enriched",
   "title": "P300 dataset BI2015b from a \"Brain Invaders\" experiment",
-  "description": "This dataset comprises electroencephalographic recordings from 50 healthy subjects performing a visual P300 brain-computer interface videogame called Brain Invaders. The experiment employed an oddball paradigm with 36 symbols flashed pseudo-randomly across three sessions with varying flash durations (110ms, 80ms, 50ms) to elicit P300 responses. EEG signals were acquired using 32 active wet electrodes at 512 Hz sampling rate, with real-time adaptive classification enabling calibration-free operation.",
-  "methods_description": "EEG data were recorded from 44 subjects using 32 active wet Silver/Silver Chloride electrodes (10-10 montage) at 512 Hz sampling rate with a g.USBamp amplifier (g.tec). The experiment consisted of three game sessions of 9 levels each with different flash durations (110ms, 80ms, 50ms), preceded and followed by ~1 minute of resting state recordings with eyes closed. Each repetition comprised 12 pseudo-random flashes of six-symbol groups with a 1:5 target-to-non-target ratio. USB digital-to-analog converter synchronization was used to reduce timing jitter. A real-time adaptive Riemannian Minimum Distance to Mean classifier provided online feedback.",
+  "description": "This dataset comprises electroencephalographic recordings from 50 healthy subjects performing a visual P300 brain-computer interface videogame called Brain Invaders. The experiment employed an oddball paradigm with 36 symbols flashed pseudo-randomly across three sessions with varying flash durations (110ms, 80ms, 50ms) to elicit P300 responses. EEG signals were acquired using 32 active wet electrodes at 512 Hz sampling rate, with real-time adaptive classification enabling calibration-free operation. Resting state and eyes-closed recordings were acquired before and after the three game sessions. This is a derivative dataset processed from the original raw data (10.5281/zenodo.3266930).",
+  "methods_description": "EEG data were recorded from 50 subjects using 32 active wet Silver/Silver Chloride electrodes (10-10 montage) at 512 Hz sampling rate with a g.USBamp amplifier (g.tec). The experiment consisted of three game sessions of 9 levels each with different flash durations (110ms, 80ms, 50ms), with approximately one minute of resting state and eyes-closed recordings before and after the sessions. The Brain Invaders interface presented 36 aliens in pseudo-random groups of six symbols using an oddball paradigm (1 Target, 35 Non-Target). Synchronization was achieved via USB digital-to-analog converter connected to the trigger channel to reduce jitter. A real-time adaptive Riemannian Minimum Distance to Mean classifier provided online feedback during the experiment to enable calibration-free operation.",
   "license": "CC-BY-4.0",
   "dataset_type": "derivative",
   "authors": {
@@ -26,30 +26,24 @@
       "value_uri": "http://id.nlm.nih.gov/mesh/D004569"
     },
     {
-      "term": "P300",
+      "term": "P300"
+    },
+    {
+      "term": "Brain-Computer Interface"
+    },
+    {
+      "term": "Oddball paradigm",
       "subject_scheme": "MeSH",
       "value_uri": "http://id.nlm.nih.gov/mesh/D018913"
     },
     {
-      "term": "Brain-Computer Interface",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D001931"
+      "term": "Visual stimulation"
     },
     {
-      "term": "Oddball paradigm"
+      "term": "Real-time classification"
     },
     {
-      "term": "Event-related potential",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D018913"
-    },
-    {
-      "term": "Visual stimulus",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D014796"
-    },
-    {
-      "term": "Gaming"
+      "term": "Calibration-free"
     }
   ],
   "related_identifiers": [
@@ -101,5 +95,5 @@
     ".yaml",
     ".yml"
   ],
-  "source_hash": "de1540b63a3fc1c21d60b099359ec00f29f579a6cf35ae4e6e8906e0c54f5d42"
+  "source_hash": "cccf8bb69479300b15c6d610d69c89c488a75923912b6e97fab60fa4482949fc"
 }
