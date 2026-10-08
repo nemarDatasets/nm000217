@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "enriched",
   "title": "P300 dataset BI2015b from a \"Brain Invaders\" experiment",
-  "description": "EEG recordings from 44 participants playing Brain Invaders, a visual P300 brain-computer interface game based on an oddball paradigm (Cooperative versus Competitive dataset, BI2015b). Thirty-six aliens are flashed in pseudo-random groups of six symbols. Each participant plays three game sessions with flash durations of 50, 80 and 110 ms. Data were recorded with 32 wet electrodes at GIPSA-lab, Grenoble, France, in 2015. A real-time adaptive Riemannian classifier was used, which requires no calibration.",
-  "methods_description": "EEG was recorded at 512 Hz from 32 active wet Ag/AgCl electrodes (g.tec g.USBamp, 10-10 montage) with the reference on the right earlobe and the ground at Fz. Each participant completed three game sessions of 9 levels, one per flash duration (110, 80 and 50 ms). About one minute of resting state and eyes-closed data was recorded before and after the sessions. Events were tagged in hardware through a USB digital-to-analog converter to reduce jitter, and no digital filter was applied. An online adaptive Riemannian Minimum Distance to Mean classifier determined the participants' commands.",
+  "description": "EEG recordings from 44 participants (the README abstract describes 50) playing Brain Invaders, a visual P300 brain-computer interface game based on the oddball paradigm. A 36-symbol grid was flashed pseudo-randomly under three flash durations (50, 80 and 110 ms), with 32 wet electrodes recorded at 512 Hz. The dataset supports research on calibration-free, adaptive Riemannian classification for P300 BCIs.",
+  "methods_description": "The experiment took place at GIPSA-lab, Grenoble, in 2015. Each participant played three Brain Invaders sessions of 9 levels, each with a different flash duration (110, 80 and 50 ms). Around one minute of resting-state and eyes-closed EEG was recorded before and after the sessions. EEG was acquired with a g.USBamp amplifier and 32 g.tec Ag/AgCl electrodes (10-10 montage, right earlobe reference, Fz ground). No digital filter was applied, and hardware tagging through a USB digital-to-analog converter was used to reduce jitter. A real-time adaptive Riemannian Minimum Distance to Mean classifier determined the participants' commands.",
   "license": "CC-BY-4.0",
   "dataset_type": "derivative",
   "authors": {
@@ -26,22 +26,21 @@
       "value_uri": "http://id.nlm.nih.gov/mesh/D004569"
     },
     {
-      "term": "EEG"
+      "term": "Brain-Computer Interfaces",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D062207"
     },
     {
       "term": "P300"
     },
     {
-      "term": "Brain-Computer Interfaces",
-      "subject_scheme": "MeSH",
-      "scheme_uri": "https://id.nlm.nih.gov/mesh/",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D062207"
+      "term": "Brain Invaders"
     },
     {
       "term": "oddball paradigm"
     },
     {
-      "term": "Brain Invaders"
+      "term": "Riemannian classification"
     }
   ],
   "related_identifiers": [
@@ -93,5 +92,5 @@
     ".yaml",
     ".yml"
   ],
-  "source_hash": "ab66fd7960768a85a39ca8ffe515ac7727fa3fbf215a73b5f9dc2467b2ce9954"
+  "source_hash": "2fbb82a529c5c6e2ce28a62216094c591be61ccd73cdb5a7aa993d8ce178d1c1"
 }
